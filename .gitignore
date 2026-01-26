@@ -1,3 +1,6 @@
+# do not commit created csv files, mainly for possible terms of use
+*.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -143,6 +146,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+digimon_venv/
 
 # Spyder project settings
 .spyderproject
