@@ -26,9 +26,9 @@ python src/api.py <br>
 project-root/
 │
 ├── src/
-│   └── api.py
-|   raw/
-│   └── digimon.csv
+│ ├── api.py
+│ └── raw/
+│ └── digimon.csv
 │
 ├── requirements.txt
 └── README.md
