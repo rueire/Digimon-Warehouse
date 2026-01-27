@@ -21,15 +21,14 @@ pip install -r requirements.txt or python -m pip install -r requirements.txt <br
 python src/api.py <br>
 --> Creates raw .csv file into dir 'raw' where data can be used<br>
 
-### Current Intended Structure:
+### Current Structure:
 ```
 project-root/
 │
-├── raw/
-│   └── digimon.csv
-│
 ├── src/
 │   └── api.py
+|   raw/
+│   └── digimon.csv
 │
 ├── requirements.txt
 └── README.md
