@@ -20,13 +20,13 @@ def get_digimons():
             data = response.json()
             page_data = data['content']
 
+            all_data.extend(page_data)
+
             if data["pageable"]["nextPage"] == "":
                 break
 
             # if isinstance(data, dict):
                 # print(data.keys()) => dict_keys(['content', 'pageable'])
-
-            all_data.extend(page_data)
             page += 1
 
         df = json_normalize(all_data)
@@ -159,5 +159,5 @@ def get_digimons_details(batch_size=100):
 
 
 # get_digimons()
-get_digimon_levels()
+# get_digimon_levels()
 # get_digimons_details(100)
