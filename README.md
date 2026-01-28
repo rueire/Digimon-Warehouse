@@ -5,6 +5,7 @@ Data Warehouse Project
 This project is a Data Warehouse solution aimed at collecting data from an external API (Digi-API), processing it, and storing it for further analysis.<br>
 The project is in an early stage: API data fetching is still under development.<br>
 Currently, the data is retrieved from the API, saved as digimon.csv, and loaded into a basic DataFrame.<br><br>
+Now only has facts, metadata to be added later.
 
 ### Technologies <br>
 Python 3.x<br>
