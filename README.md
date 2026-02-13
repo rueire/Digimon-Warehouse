@@ -28,9 +28,9 @@ project-root/
 │
 ├── src/
 │ ├── api/
-| └── api.py
+|      api.py
 │ └── raw/
-│ └── csv files
+│      csv files
 │
 ├── requirements.txt
 └── README.md
