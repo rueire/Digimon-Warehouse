@@ -10,5 +10,5 @@ file_path = dir/'digimon.csv'
 data = pd.read_csv(file_path)
 main_data = data[['id', 'name']]
 
-# View the first 5 rows
+# View the first 10 rows
 print(main_data.head(10).to_string(index=False))

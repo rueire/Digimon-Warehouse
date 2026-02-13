@@ -33,9 +33,32 @@ def get_digimon_levels():
             else:
                 print(f"HTTP error occurred: {http_err}")
 
-            # if isinstance(data, dict):
-                # print(data.keys()) => dict_keys(['content', 'pageable'])
-
         except Exception as e: 
             print('error at api request: ', e)
+
+def level_info():
+    try:
+        res = requests.get('https://digi-api.com/api/v1/level')
+        res_json = res.json()['content']
+
+        level = pd.DataFrame([{
+            'id':1,
+            'name': res_json['name'],
+            'description': res_json['description']
+        }])
+
+        # path src/raw
+        dir = Path(__file__).resolve().parent.parent
+        raw_dir = dir/'raw'
+        raw_dir.mkdir(parents=True, exist_ok=True)   
+
+        file_path = raw_dir/'level_info.csv'
+
+        level.to_csv(file_path, index=False, encoding='utf-8')
+
+        print('level info saved')
+
+
+    except Exception as e:
+        print(f'error: {e}')
 
